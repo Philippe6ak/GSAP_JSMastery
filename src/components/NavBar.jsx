@@ -1,0 +1,30 @@
+import { NAV_LINKS } from "../constants";
+
+function NavBar() {
+  return (
+    <header>
+      <nav>
+        <img src="/logo.svg" alt="Apple Logo" />
+
+        <ul>
+          {NAV_LINKS.map((item) => (
+            <li key={item.label}>
+              <a href={item.link}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex-center gap-3">
+          <button>
+            <img src="/search.svg" alt="Search Icon" />
+          </button>
+          <button>
+            <img src="/cart.svg" alt="Cart Icon" />
+          </button>
+        </div>
+      </nav>
+    </header>
+  );
+}
+
+export default NavBar;
