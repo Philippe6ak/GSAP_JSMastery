@@ -16,7 +16,7 @@ function ModelScroll() {
   const { setTexture } = useMacbookStore();
 
   useEffect(() => {
-    featureSequence.map((feature) => {
+    featureSequence.forEach((feature) => {
       const v = document.createElement("video");
 
       Object.assign(v, {
