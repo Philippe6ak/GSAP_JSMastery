@@ -1,8 +1,6 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-
 import { performanceImages, performanceImgPositions } from "../constants";
 import { useMediaQuery } from "react-responsive";
 
@@ -30,8 +28,6 @@ function Performance() {
           },
         },
       );
-
-      if (isMobile) return;
 
       const timeline = gsap.timeline({
         defaults: { ease: "power1.inOut", duration: 2, overwrite: "auto" },
